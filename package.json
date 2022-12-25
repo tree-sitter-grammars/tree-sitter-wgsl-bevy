@@ -1,0 +1,34 @@
+{
+  "name": "tree-sitter-wgsl-bevy",
+  "version": "0.1.0",
+  "description": "WGSL grammar for tree-sitter with extensions for the Bevy preprocessor (extends tree-sitter-wgsl)",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "wgsl"
+  ],
+  "author": "Stephan Seitz",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-wgsl": "git://github.com/szebniok/tree-sitter-wgsl.git",
+    "tree-sitter-cli": "^0.20.7"
+  },
+  "scripts": {
+    "test": "tree-sitter test",
+    "test-windows": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theHamsta/tree-sitter-wgsl-bevy.git"
+  },
+  "tree-sitter": [
+    {
+      "file-types": [
+        "wgsl"
+      ]
+    }
+  ]
+}

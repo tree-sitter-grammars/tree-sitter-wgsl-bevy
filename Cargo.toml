@@ -1,0 +1,27 @@
+[package]
+name = "tree-sitter-wgsl-bevy"
+description = "WGSL grammar for tree-sitter with extensions for the Bevy preprocessor (extends tree-sitter-wgsl)"
+version = "0.1.0"
+keywords = ["incremental", "parsing", "wgsl"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/theHamsta/tree-sitter-wgsl-bevy"
+edition = "2021"
+license = "MIT"
+authors = ["tree-sitter-wgsl authors", "Stephan Seitz"]
+
+build = "bindings/rust/build.rs"
+include = [
+  "bindings/rust/*",
+  "grammar.js",
+  "queries/*",
+  "src/*",
+]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter = "0.20.9"
+
+[build-dependencies]
+cc = "1.0.78"
