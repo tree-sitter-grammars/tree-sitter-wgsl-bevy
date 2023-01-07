@@ -1775,7 +1775,7 @@
         },
         {
           "type": "STRING",
-          "value": "i32"
+          "value": "f16"
         },
         {
           "type": "SEQ",
@@ -1964,6 +1964,10 @@
               "members": [
                 {
                   "type": "STRING",
+                  "value": "f16"
+                },
+                {
+                  "type": "STRING",
                   "value": "f32"
                 },
                 {
@@ -1996,6 +2000,10 @@
             {
               "type": "CHOICE",
               "members": [
+                {
+                  "type": "STRING",
+                  "value": "f16"
+                },
                 {
                   "type": "STRING",
                   "value": "f32"
@@ -2032,6 +2040,10 @@
               "members": [
                 {
                   "type": "STRING",
+                  "value": "f16"
+                },
+                {
+                  "type": "STRING",
                   "value": "f32"
                 },
                 {
@@ -2064,6 +2076,10 @@
             {
               "type": "CHOICE",
               "members": [
+                {
+                  "type": "STRING",
+                  "value": "f16"
+                },
                 {
                   "type": "STRING",
                   "value": "f32"
@@ -2100,6 +2116,10 @@
               "members": [
                 {
                   "type": "STRING",
+                  "value": "f16"
+                },
+                {
+                  "type": "STRING",
                   "value": "f32"
                 },
                 {
@@ -2134,6 +2154,10 @@
               "members": [
                 {
                   "type": "STRING",
+                  "value": "f16"
+                },
+                {
+                  "type": "STRING",
                   "value": "f32"
                 },
                 {
@@ -2166,6 +2190,10 @@
             {
               "type": "CHOICE",
               "members": [
+                {
+                  "type": "STRING",
+                  "value": "f16"
+                },
                 {
                   "type": "STRING",
                   "value": "f32"
