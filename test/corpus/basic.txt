@@ -91,7 +91,7 @@ struct FragmentInput {
           (identifier)
           (identifier))))
     (preproc_else)
-    (comment)))
+    (line_comment)))
 
 ================================================================================
 Function ifdef
