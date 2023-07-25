@@ -37,6 +37,7 @@ module.exports = grammar(WGSL, {
             field('path', choice(
                 $.import_path,
             )),
+            optional(choice(commaSep1($.identifier), field("alias", $.alias))),
             '\n'
         ),
         define_import_path: $ => seq(
@@ -47,6 +48,7 @@ module.exports = grammar(WGSL, {
             '\n'
         ),
         import_path: $ => doubleColonSep1($.identifier),
+        alias: $ => seq('as', $.identifier),
 
         ...preprocIf('', $ => $._declaration),
         ...preprocIf('_in_statement', $ => $._statement),
@@ -104,4 +106,8 @@ function preprocIf(suffix, content) {
 
 function doubleColonSep1(rule) {
     return seq(rule, repeat(seq('::', rule)))
+}
+
+function commaSep1(rule) {
+    return seq(rule, repeat(seq(',', rule)))
 }

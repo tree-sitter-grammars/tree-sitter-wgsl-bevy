@@ -18,6 +18,47 @@ Simple imports
       (identifier))))
 
 ================================================================================
+Aliased imports
+================================================================================
+
+#import bevy_pbr::mesh_types as foo
+#import bevy_pbr as pbr
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (preproc_import
+    (import_path
+      (identifier)
+      (identifier))
+    (alias
+      (identifier)))
+  (preproc_import
+    (import_path
+      (identifier))
+    (alias
+      (identifier))))
+
+================================================================================
+Selective imports
+================================================================================
+
+#import foo bar, baz
+#import foo2 bar2
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (preproc_import
+    (import_path
+      (identifier)
+      (identifier)))
+  (preproc_import
+    (import_path
+      (identifier)
+      (identifier))))
+
+================================================================================
 Imports in structs
 ================================================================================
 

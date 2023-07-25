@@ -10,6 +10,21 @@
     "fields": {}
   },
   {
+    "type": "alias",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "argument_list_expression",
     "named": true,
     "fields": {},
@@ -1576,6 +1591,16 @@
     "type": "preproc_import",
     "named": true,
     "fields": {
+      "alias": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "alias",
+            "named": true
+          }
+        ]
+      },
       "path": {
         "multiple": false,
         "required": true,
@@ -1586,6 +1611,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2388,6 +2423,10 @@
   },
   {
     "type": "array",
+    "named": false
+  },
+  {
+    "type": "as",
     "named": false
   },
   {
