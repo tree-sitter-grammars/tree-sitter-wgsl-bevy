@@ -19,6 +19,21 @@ module.exports = grammar(WGSL, {
             original,
         ),
 
+        function_declaration: ($, original) => choice(seq(
+            optional("virtual"),
+            original
+        ), seq(
+            "override",
+            repeat($.attribute),
+            "fn",
+            field("name", $.import_path),
+            "(",
+            field("parameters", optional($.parameter_list)),
+            ")",
+            field("type", optional($.function_return_type_declaration)),
+            field("body", $.compound_statement)
+        )),
+
         struct_declaration: $ => seq(
             "struct",
             field("name", $.identifier),

@@ -51,12 +51,13 @@ Selective imports
 (source_file
   (preproc_import
     (import_path
-      (identifier)
-      (identifier)))
+      (identifier))
+    (identifier)
+    (identifier))
   (preproc_import
     (import_path
-      (identifier)
-      (identifier))))
+      (identifier))
+    (identifier)))
 
 ================================================================================
 Imports in structs
