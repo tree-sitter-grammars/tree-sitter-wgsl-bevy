@@ -1,0 +1,86 @@
+================================================================================
+Virtual functions
+================================================================================
+
+
+    virtual fn point_light(world_position: vec3<f32>) -> vec3<f32> { }
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    (identifier)
+    (parameter_list
+      (parameter
+        (variable_identifier_declaration
+          (identifier)
+          (type_declaration
+            (type_declaration)))))
+    (function_return_type_declaration
+      (type_declaration
+        (type_declaration)))
+    (compound_statement)))
+
+================================================================================
+Overrides
+================================================================================
+
+#import bevy_pbr::lighting as Lighting
+
+override fn Lighting::point_light (world_position: vec3<f32>) -> vec3<f32> {
+    let original = Lighting::point_light(world_position);
+    let quantized = vec3<u32>(original * 3.0);
+    return vec3<f32>(quantized) / 3.0;
+}
+--------------------------------------------------------------------------------
+
+(source_file
+  (preproc_import
+    (import_path
+      (identifier)
+      (identifier))
+    (alias
+      (identifier)))
+  (function_declaration
+    (import_path
+      (identifier)
+      (identifier))
+    (parameter_list
+      (parameter
+        (variable_identifier_declaration
+          (identifier)
+          (type_declaration
+            (type_declaration)))))
+    (function_return_type_declaration
+      (type_declaration
+        (type_declaration)))
+    (compound_statement
+      (variable_statement
+        (identifier)
+        (ERROR
+          (type_declaration
+            (identifier)))
+        (type_constructor_or_function_call_expression
+          (type_declaration
+            (identifier))
+          (argument_list_expression
+            (identifier))))
+      (variable_statement
+        (identifier)
+        (type_constructor_or_function_call_expression
+          (type_declaration
+            (type_declaration))
+          (argument_list_expression
+            (binary_expression
+              (identifier)
+              (const_literal
+                (float_literal))))))
+      (return_statement
+        (binary_expression
+          (type_constructor_or_function_call_expression
+            (type_declaration
+              (type_declaration))
+            (argument_list_expression
+              (identifier)))
+          (const_literal
+            (float_literal)))))))

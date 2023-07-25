@@ -892,6 +892,10 @@
           {
             "type": "identifier",
             "named": true
+          },
+          {
+            "type": "import_path",
+            "named": true
           }
         ]
       },
@@ -2767,6 +2771,10 @@
   },
   {
     "type": "vec4",
+    "named": false
+  },
+  {
+    "type": "virtual",
     "named": false
   },
   {
