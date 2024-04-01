@@ -1,4 +1,4 @@
-//! This crate provides hlsl language support for the [tree-sitter][] parsing library.
+//! This crate provides wgsl_bevy language support for the [tree-sitter][] parsing library.
 //!
 //! Typically, you will use the [language][language func] function to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
@@ -6,7 +6,7 @@
 //! ```
 //! let code = "";
 //! let mut parser = tree_sitter::Parser::new();
-//! parser.set_language(tree_sitter_hlsl::language()).expect("Error loading hlsl grammar");
+//! parser.set_language(tree_sitter_wgsl_bevy::language()).expect("Error loading wgsl_bevy grammar");
 //! let tree = parser.parse(code, None).unwrap();
 //! ```
 //!
