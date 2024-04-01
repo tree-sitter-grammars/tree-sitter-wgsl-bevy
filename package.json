@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-wgsl-bevy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WGSL grammar for tree-sitter with extensions for the Bevy preprocessor (extends tree-sitter-wgsl)",
   "main": "bindings/node",
   "keywords": [
