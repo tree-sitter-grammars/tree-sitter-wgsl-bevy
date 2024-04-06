@@ -4,7 +4,7 @@ tree-sitter-wgsl-bevy
 [![CI][ci]](https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy/actions/workflows/ci.yml)
 [![discord][discord]](https://discord.gg/w7nTvsVJhm)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
-[![npm][npm]](https://www.npmjs.com/package/tree-sitter-wgsl_bevy)
+[![npm][npm]](https://www.npmjs.com/package/tree-sitter-wgsl-bevy)
 [![crates][crates]](https://crates.io/crates/tree-sitter-wgsl_bevy)
 [![pypi][pypi]](https://pypi.org/project/tree-sitter-wgsl_bevy)
 
