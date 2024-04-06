@@ -3,22 +3,43 @@
   "version": "0.1.1",
   "description": "WGSL grammar for tree-sitter with extensions for the Bevy preprocessor (extends tree-sitter-wgsl)",
   "main": "bindings/node",
+  "types": "bindings/node",
   "keywords": [
     "parser",
     "wgsl"
   ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
   "author": "Stephan Seitz",
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.17.0"
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "tree-sitter-wgsl": "git://github.com/szebniok/tree-sitter-wgsl.git",
-    "tree-sitter-cli": "^0.20.7"
+    "tree-sitter-cli": "^0.20.7",
+    "prebuildify": "^6.0.0"
   },
   "scripts": {
     "test": "tree-sitter test",
-    "test-windows": "tree-sitter test"
+    "test-windows": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "repository": {
     "type": "git",
