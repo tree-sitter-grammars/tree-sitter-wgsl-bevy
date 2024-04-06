@@ -5,8 +5,8 @@ tree-sitter-wgsl-bevy
 [![discord][discord]](https://discord.gg/w7nTvsVJhm)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
 [![npm][npm]](https://www.npmjs.com/package/tree-sitter-wgsl-bevy)
-[![crates][crates]](https://crates.io/crates/tree-sitter-wgsl_bevy)
-[![pypi][pypi]](https://pypi.org/project/tree-sitter-wgsl_bevy)
+[![crates][crates]](https://crates.io/crates/tree-sitter-wgsl-bevy)
+[![pypi][pypi]](https://pypi.org/project/tree-sitter-wgsl-bevy)
 
 This is a extension of [tree-sitter-wgsl](https://github.com/szebniok/tree-sitter-wgsl) to support
 the [Bevy](https://bevyengine.org/) preprocessor.
