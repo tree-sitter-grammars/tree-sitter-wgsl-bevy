@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tree-sitter-wgsl-bevy"
 description = "WgslBevy grammar for tree-sitter"
-version = "0.1.1"
+version = "0.1.2"
 keywords = ["incremental", "parsing", "tree-sitter", "wgsl-bevy"]
 classifiers = [
   "Intended Audience :: Developers",
