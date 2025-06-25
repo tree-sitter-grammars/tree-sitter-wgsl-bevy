@@ -1,47 +1,41 @@
 // swift-tools-version:5.3
+
+import Foundation
 import PackageDescription
 
+var sources = ["src/parser.c"]
+if FileManager.default.fileExists(atPath: "src/scanner.c") {
+    sources.append("src/scanner.c")
+}
+
 let package = Package(
-    name: "TreeSitterWgslBevy",
-    platforms: [.macOS(.v10_13), .iOS(.v11)],
+    name: "TreeSitterWGSLBevy",
     products: [
-        .library(name: "TreeSitterWgslBevy", targets: ["TreeSitterWgslBevy"]),
+        .library(name: "TreeSitterWGSLBevy", targets: ["TreeSitterWGSLBevy"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name: "SwiftTreeSitter", url: "https://github.com/tree-sitter/swift-tree-sitter", from: "0.9.0"),
+    ],
     targets: [
-        .target(name: "TreeSitterWgslBevy",
-                path: ".",
-                exclude: [
-                    "Cargo.toml",
-                    "Makefile",
-                    "binding.gyp",
-                    "bindings/c",
-                    "bindings/go",
-                    "bindings/node",
-                    "bindings/python",
-                    "bindings/rust",
-                    "prebuilds",
-                    "grammar.js",
-                    "package.json",
-                    "package-lock.json",
-                    "pyproject.toml",
-                    "setup.py",
-                    "test",
-                    "examples",
-                    ".editorconfig",
-                    ".github",
-                    ".gitignore",
-                    ".gitattributes",
-                    ".gitmodules",
-                ],
-                sources: [
-                    "src/parser.c",
-                ],
-                resources: [
-                    .copy("queries")
-                ],
-                publicHeadersPath: "bindings/swift",
-                cSettings: [.headerSearchPath("src")])
+        .target(
+            name: "TreeSitterWGSLBevy",
+            dependencies: [],
+            path: ".",
+            sources: sources,
+            resources: [
+                .copy("queries")
+            ],
+            publicHeadersPath: "bindings/swift",
+            cSettings: [.headerSearchPath("src")]
+        ),
+        .testTarget(
+            name: "TreeSitterWGSLBevyTests",
+            dependencies: [
+                "SwiftTreeSitter",
+                "TreeSitterWGSLBevy",
+            ],
+            path: "bindings/swift/TreeSitterWGSLBevyTests"
+        )
     ],
     cLanguageStandard: .c11
 )

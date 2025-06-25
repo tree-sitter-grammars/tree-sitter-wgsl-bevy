@@ -1,0 +1,28 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "wgsl_bevy",
+      "title": "Bevy",
+      "scope": "source.bevy",
+      "camelcase": "WGSLBevy",
+      "class-name": "TreeSitterWGSLBevy",
+      "file-types": [
+        "wgsl"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "0.1.3",
+    "license": "MIT",
+    "description": "Bevy grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Stephan Seitz"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy"
+    }
+  }
+}
