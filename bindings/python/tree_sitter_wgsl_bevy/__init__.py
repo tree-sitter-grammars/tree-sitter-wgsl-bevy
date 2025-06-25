@@ -1,4 +1,4 @@
-"WgslBevy grammar for tree-sitter"
+"""Bevy grammar for tree-sitter"""
 
 from ._binding import language
 
