@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-wgsl-bevy
-        VERSION "0.1.3"
+        VERSION "0.1.4"
         DESCRIPTION "Bevy grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy"
         LANGUAGES C)

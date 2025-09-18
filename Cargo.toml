@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-wgsl-bevy"
 description = "Bevy grammar for tree-sitter"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Stephan Seitz"]
 license = "MIT"
 readme = "README.md"
