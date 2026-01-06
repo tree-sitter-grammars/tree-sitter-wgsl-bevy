@@ -2,13 +2,11 @@ fn main() {
     let src_dir = std::path::Path::new("src");
 
     let mut c_config = cc::Build::new();
-    c_config.std("c11").include(src_dir);
+    c_config.std("c11").include(&src_dir);
+    c_config.flag_if_supported("-Wno-unused-parameter");
 
-    if cfg!(target_env = "msvc") {
-        c_config.flags(["/utf-8", "/wd4100"]);
-    } else {
-        c_config.flag("-Wno-unused-parameter");
-    }
+    #[cfg(target_env = "msvc")]
+    c_config.flag("-utf-8");
 
     let parser_path = src_dir.join("parser.c");
     c_config.file(&parser_path);
